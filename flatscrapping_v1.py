@@ -16,7 +16,7 @@ def get_webpage_html(zipcode):
     
     ''' Look at the latest advertisements on leboncoin.fr for this zipcode provided and get the html of this page, bypassing the captcha anti-scrapping system '''
     
-    url = 'https://www.leboncoin.fr/recherche?category=9&text=appartement&locations=Paris_75017__48.88707_2.30629_2329&price=min-700000&square=50-max'
+    url = f'https://www.leboncoin.fr/recherche?category=9&text=appartement&locations={zipcode}'
     headers = {'Host': 'www.leboncoin.fr',
 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0',
 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
