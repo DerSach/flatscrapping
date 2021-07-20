@@ -8,6 +8,7 @@ import smtplib
 from email.mime.text import MIMEText
 import pyinputplus as pyip
 import datetime
+import time
 
 # def filter_flat_advertisements(zipcode):
 #   ''' ''' TO DO: write a function enabling to custom the flat advertisements search (min sq/m2, max price, etc.)
@@ -30,9 +31,7 @@ def get_webpage_html(zipcode):
     response = requests.get(url, headers=headers)
     
     soup = BeautifulSoup(response.content, 'html.parser')
-    print(soup)
-    return soup
-
+    
 def get_flats_df(soup):
     
     ''' Based on the html content, give a dataframe with the main caracteristics for each flat advertisement of the page '''
@@ -177,14 +176,18 @@ def send_mail(content, filtered_df):
     print(f'Mail sent at {datetime.datetime.now()}')
     filtered_df.to_csv('already_sent_flats.csv')
 
-def main():
-    zipcode = pyip.inputNum('Please enter the zipcode of the area where you want to look for flat advertisements: ')
+def main(zipcode, max_ppm2):
+    if not zipcode:
+        zipcode = pyip.inputNum('Please enter the zipcode of the area where you want to look for flat advertisements: ')
     soup = get_webpage_html(zipcode)
     flats_df = get_flats_df(soup)
-    max_ppm2 = pyip.inputNum('What is the maximum price per m² of the flat advertisements you would like to select? ')
+    if not max_ppm2:
+        max_ppm2 = pyip.inputNum('What is the maximum price per m² of the flat advertisements you would like to select? ')
     filtered_df = get_interesting_flat_advertisements(flats_df, max_ppm2)
     content = write_html_mail_content(filtered_df)
     send_mail(content, filtered_df)
+    time.sleep(10)
+    main(zipcode, max_ppm2)
     
 if __name__ == '__main__':
     if len(sys.argv) != 2:
