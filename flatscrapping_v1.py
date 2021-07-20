@@ -176,7 +176,7 @@ def send_mail(content, filtered_df):
     print(f'Mail sent at {datetime.datetime.now()}')
     filtered_df.to_csv('already_sent_flats.csv')
 
-def main(zipcode, max_ppm2):
+def main(zipcode = None, max_ppm2 = None):
     if not zipcode:
         zipcode = pyip.inputNum('Please enter the zipcode of the area where you want to look for flat advertisements: ')
     soup = get_webpage_html(zipcode)
