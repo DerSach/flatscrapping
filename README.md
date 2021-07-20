@@ -27,3 +27,5 @@ Here the 'Cookies' key in the 'headers' dictionnary needs to be updated to bypas
 Then you will be asked a maximum price per m². The program selects the corresponding flat advertisements, compares them to a csv storing all the flat advertisements already sent, and sends only the flat advertisements not already sent.
 
 In the end, you should receive an email (as below) on the specified email address with the main characteristics of each flat advertisement corresponding to your request and that have not been already sent.
+
+![Capture d’écran 2021-07-20 à 16 30 51](https://user-images.githubusercontent.com/78410163/126343066-c1a1bd10-39a6-4d45-9fc9-36b4f52d58eb.png)
