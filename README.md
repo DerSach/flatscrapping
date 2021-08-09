@@ -1,7 +1,11 @@
 # flatscrapping
-Get latest flat advertisements on leboncoin website by mail based on specified conditions
+Sometimes real estate websites offering alerts are not quick enough and you might be aware of a flat advertisement only few minutes or few hours after it has been published. This delay can sometimes be big enough for you not to be able to bid or even visit the flat as too many people already contacted the landlord or real estate agency.
+The main purpose of this program is thus to know immediatly when a flat advertisement corresponding to your criteria is published by letting the program run in your terminal window. As soon as a new flat advertisement corresponding to your search is published on PAP.fr website, you will get an email alert on the specified email address with the main details of the advertisement.
+This is a recursive function, hence infinite unless you volontarily interrupt it (by closing the terminal window for instance). When closed, you will not be able to get emails anymore. You will have to restart to program and let it run again.
 
 ## **Prerequisite**
+
+In your terminal enter the following:
 
 `pip install pandas`
 
@@ -15,16 +19,12 @@ Get latest flat advertisements on leboncoin website by mail based on specified c
 
 Execute from terminal this way:
 
-`python flatscrapping_v1.py destination_email_address@domain.com`
+`python flatscrapping_v3.py destination_email_address@domain.com`
 
-You will have the possibility to enter a French zipcode when asked (e.g. '75017' for Paris 17th district)
-The program will then get the latest metadata from leboncoin website parsing its html.
+You will have the possibility to enter Paris district numbers when asked (e.g. '1' for Paris 1st district, '17' for Paris 17th district, etc.)
+The program will then get the latest metadata from PAP website parsing its html.
 
-UPDATE NOTE: easier to execute from a jupyter notebook as CAPTCHA protection can't be bypassed from terminal
-
-Here the 'Cookies' key in the 'headers' dictionnary needs to be updated to bypass the CAPTCHA (to do so, see: https://medium.com/@rifaislamet1509/bypass-recaptcha-to-scraping-australian-yellowpages-using-python-9330101e99a3)
-
-Then you will be asked a maximum price per m². The program selects the corresponding flat advertisements, compares them to a csv storing all the flat advertisements already sent, and sends only the flat advertisements not already sent.
+Then you will be asked a maximum price and a minimum m² surface for the flat advertisements you want to select. The program compares the corresponding flat advertisements to a csv storing all the flat advertisements already sent, and sends only the flat advertisements not already sent.
 
 In the end, you should receive an email (as below) on the specified email address with the main characteristics of each flat advertisement corresponding to your request and that have not already been sent.
 
