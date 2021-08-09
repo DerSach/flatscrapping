@@ -30,7 +30,7 @@ Then you will be asked a maximum price and a minimum m² surface for the flat ad
 
 In the end, you should receive an email (as below) on the specified email address with the main characteristics of each flat advertisement corresponding to your request and that have not already been sent.
 
-![Capture d’écran 2021-07-20 à 16 30 51](https://user-images.githubusercontent.com/78410163/126343066-c1a1bd10-39a6-4d45-9fc9-36b4f52d58eb.png)
+![Capture d’écran 2021-08-09 à 17 24 44](https://user-images.githubusercontent.com/78410163/128731701-12653f6c-934b-4866-b0b1-379584656e6e.png)
 
 Hope it helps ! :)
 
