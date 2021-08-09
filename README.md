@@ -1,6 +1,8 @@
 # flatscrapping
 Sometimes real estate websites offering alerts are not quick enough and you might be aware of a flat advertisement only few minutes or few hours after it has been published. This delay can sometimes be big enough for you not to be able to bid or even visit the flat as too many people already contacted the landlord or real estate agency.
+
 The main purpose of this program is thus to know immediatly when a flat advertisement corresponding to your criteria is published by letting the program run in your terminal window. As soon as a new flat advertisement corresponding to your search is published on PAP.fr website, you will get an email alert on the specified email address with the main details of the advertisement.
+
 This is a recursive function, hence infinite unless you volontarily interrupt it (by closing the terminal window for instance). When closed, you will not be able to get emails anymore. You will have to restart to program and let it run again.
 
 ## **Prerequisite**
