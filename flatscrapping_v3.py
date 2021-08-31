@@ -196,13 +196,13 @@ def send_mail(content, filtered_df):
     print('Number of advertisements corresponding to your request not already sent: ',len(filtered_df))
     
     SMTPserver = 'smtp.bbox.fr'
-    sender = 'leboncoin@alerts.fr'
+    sender = 'pap@alerts.fr'
     destination = sys.argv[1]
 
 
     # Create message container - the correct MIME type is multipart/alternative.
     msg = MIMEText(content, 'html')
-    msg['Subject'] = "Alerte leboncoin"
+    msg['Subject'] = "Alerte PAP"
     msg['From'] = sender
     msg['To'] = destination
 
