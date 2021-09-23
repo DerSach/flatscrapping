@@ -5,6 +5,26 @@ Sometimes real estate websites offering alerts are not quick enough and you migh
 
 This is a recursive function, hence infinite unless you volontarily interrupt it (by closing the terminal window for instance). When closed, you will not be able to get emails anymore. You will have to restart to program and let it run again.
 
+## **Important notice**
+
+#### If you have a BBOX internet connexion
+
+This program was made to be used from a BBOX internet connexion, so it is ready to use! Just follow the 'Prerequisite' and 'Usage' sections below.
+
+#### If you don't have a BBOX internet connexion and have an Orange, Free or SFR email address
+
+If you have an email address from an internet provider such as Orange, Free or SFR you can simply replace in flatscrapping_v3.py line 198 by your internet provider smtp name (*smtp.orange.fr*, *smtp.sfr.fr*, *smtp.free.fr*) and line 199 by your email address from that internet provider.
+
+`SMTPserver = 'smtp.orange/sfr/free.fr'`
+
+`sender = 'youremailaddress@orange/sfr/free.fr'`
+
+Then simply follow the 'Prerequisite' and 'Usage' sections below.
+
+#### If you don't have a BBOX internet connexion and don't have an Orange, Free or SFR email address (e.g. gmail.com, hotmail.com, etc.)
+
+Then it is possible to execute this program, but you will have to change the code to include your email address password, what is not covered in the v3.
+
 ## **Prerequisite**
 
 In your terminal enter the following:
